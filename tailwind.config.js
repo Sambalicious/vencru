@@ -26,6 +26,9 @@ module.exports = {
       "green-100": "#ECFDF3",
       "primary-300": "#D6BBFB",
       "primary-600": "#7F56D9",
+      "primary-700": "#6941C6",
+      "success-700": "#027A48",
+
       "primary-50": "#F9F5FF",
       white: "#fff",
     },
@@ -35,6 +38,7 @@ module.exports = {
       },
       boxShadow: {
         default: "0px 1px 7px rgba(0, 0, 0, 0.1)",
+        form: "0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06)",
       },
       spacing: {
         90: "350px",

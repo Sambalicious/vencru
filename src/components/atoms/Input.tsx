@@ -26,7 +26,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>((props, ref) => {
       </label>
       <input
         id={name}
-        className="placeholder-main-100 text-main-100 bg-gray-200 mt-3  py-3 w-full pl-10 border-none outline-none "
+        className="border rounded-lg text-gray-900 border-solid border-gray-300 mt-3  py-1 w-full pl-10  outline-none "
         type={type}
         {...inputProps}
         {...rest}

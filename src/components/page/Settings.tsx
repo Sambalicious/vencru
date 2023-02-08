@@ -1,6 +1,9 @@
-import { PageHeader } from "@/components/molecules";
+import { PageHeader, SectionHeader } from "@/components/molecules";
 import { tabList } from "@/utils/dummy";
 import { Tab } from "@headlessui/react";
+import { Button, Table } from "../atoms";
+import { Avatar } from "../atoms/Avatar";
+import { CardDetails, Contact } from "../organisms";
 const Settings = () => {
   return (
     <div>
@@ -17,7 +20,7 @@ const Settings = () => {
               className={({ selected }) =>
                 `${
                   selected ? "text-gray-800 bg-gray-50 outline-none" : ""
-                } border-[8px_0px_0px_8px] text-gray-700 font-normal text-sm px-6 py-1 whitespace-nowrap border border-solid border-gray-300 bg-white`
+                } border-[8px_0px_0px_8px] text-gray-700 font-normal text-sm px-6 py-2 whitespace-nowrap border border-solid border-gray-300 bg-white`
               }
               // className=" "
               key={tab.id}
@@ -32,6 +35,31 @@ const Settings = () => {
           <Tab.Panel>Content 3</Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
+
+      <div className="px-4">
+        <div className="my-4">
+          <SectionHeader
+            title="Payment Method"
+            subTitle="Update your billing details and address."
+          />
+        </div>
+
+        <CardDetails />
+
+        <div className="md:flex justify-between items-center my-3">
+          <SectionHeader title="Billing History" />
+          <Button className="py-2 px-4 mt-3" variant="primary">
+            Download all
+          </Button>
+        </div>
+
+        <Contact />
+
+        <Avatar />
+        <div className="my-10 md:px-4">
+          <Table />
+        </div>
+      </div>
     </div>
   );
 };
