@@ -10,22 +10,28 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      "main-100": "#16425B",
-      "blue-200": "#34C4EF",
-      "brand-deep": "#16425B",
-      "teal-green": "#365469",
-      red: "#ED1C24",
-      "gray-100": "#767676",
-      "gray-200": "#D9D9D9",
-      "gray-300": "#D9DBE1",
+      "black-100": " #101828",
+
+      "gray-50": "#F9FAFB",
+      "gray-700": "#344054",
+      "gray-100": "#667085",
+
+      "gray-200": "#EAECF0",
+      "gray-300": "#D0D5DD",
+      "gray-700": "#344054",
+      "gray-800": "#1D2939",
+
+      "gray-900": "#101828",
+      "gray-500": "#667085",
+      "green-100": "#ECFDF3",
+      "primary-300": "#D6BBFB",
+      "primary-600": "#7F56D9",
+      "primary-50": "#F9F5FF",
       white: "#fff",
-      "black-100": "#16425B",
-      "brand-primary": "#16425B",
-      black: "#000",
     },
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
       },
       boxShadow: {
         default: "0px 1px 7px rgba(0, 0, 0, 0.1)",
@@ -37,7 +43,7 @@ module.exports = {
   },
 
   fontFamily: {
-    sans: ["Poppins", "sans-serif"],
+    sans: ["Inter", "sans-serif"],
   },
 
   plugins: [],

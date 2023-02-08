@@ -12,10 +12,12 @@
     "svg-to-react": "svgr --typescript --icon=1em --svg-props=\"fill=\"currentColor\"\" --svgo-config=\"svgo.config.js\" --out-dir src/components/Icons -- public/icons"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.10",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.6",
     "next": "13.0.5",
     "react": "18.2.0",
+    "react-aria": "^3.22.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-responsive-modal": "^6.2.0",

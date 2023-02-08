@@ -1,0 +1,9 @@
+export { default as Svg3Layers } from "./3Layers";
+export { default as Icon } from "./Icon";
+export { default as Chart } from "./Chart";
+export { default as Flag } from "./Flag";
+export { default as Home } from "./Home";
+export { default as Settings } from "./Settings";
+export { default as Support } from "./Support";
+export { default as Users } from "./Users";
+export { default as Visa } from "./Visa";
