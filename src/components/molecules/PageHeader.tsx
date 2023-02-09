@@ -1,6 +1,6 @@
 interface PageHeaderProps {
   title: string;
-  subTitle: string;
+  subTitle?: string;
 }
 
 export const PageHeader = ({ title, subTitle }: PageHeaderProps) => {
