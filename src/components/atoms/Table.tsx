@@ -54,7 +54,7 @@ export const Table = () => {
               </td>
               <td className=" font-medium text-sm text-gray-900 hidden md:table-cell   whitespace-nowrap py-5">
                 <Button variant="ghost">
-                  <Download fill="none" stroke="#667085" />{" "}
+                  <Download fontSize={"20px"} fill="none" stroke="#667085" />{" "}
                 </Button>
               </td>
             </tr>

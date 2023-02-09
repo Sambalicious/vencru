@@ -1,18 +1,20 @@
+import { SidebarData } from "@/types/index";
 import { Button } from "../atoms";
-import { Chart } from "../Icons";
 
-export const NavItem = () => {
+export const NavItem = ({ label, icon, count }: Omit<SidebarData, "id">) => {
   return (
-    <div className="flex justify-between w-full">
+    <div className="flex justify-between items-center w-full my-5">
       <Button className="flex w-full gap-4 items-center" variant="ghost">
-        <Chart fill="none" stroke="#000" />
+        <div>{icon}</div>
         <p className="flex gap-3 text-gray-700 font-normal text-base">
-          Dashboard
+          {label}
         </p>
       </Button>
-      <div className="rounded-lg bg-gray-100 text-gray-700 p-1 font-medium text-sm">
-        10
-      </div>
+      {count && (
+        <div className="rounded-lg bg-[#F2F4F7] text-gray-700 py-1 px-2 font-medium text-sm">
+          {count}
+        </div>
+      )}
     </div>
   );
 };

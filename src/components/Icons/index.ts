@@ -7,6 +7,7 @@ export { default as Chart } from "./Chart";
 export { default as Download } from "./Download";
 export { default as Flag } from "./Flag";
 export { default as Home } from "./Home";
+export { default as Logout } from "./Logout";
 export { default as Message } from "./Message";
 export { default as NavGirl } from "./NavGirl";
 export { default as Settings } from "./Settings";

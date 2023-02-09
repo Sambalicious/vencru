@@ -2,7 +2,6 @@ import { PageHeader, SectionHeader } from "@/components/molecules";
 import { tabList } from "@/utils/dummy";
 import { Tab } from "@headlessui/react";
 import { Button, Table } from "../atoms";
-import { Avatar } from "../atoms/Avatar";
 import { CardDetails, Contact } from "../organisms";
 const Settings = () => {
   return (
@@ -48,14 +47,13 @@ const Settings = () => {
 
         <CardDetails />
 
-        <Avatar />
         <div className="md:flex justify-between items-center my-3">
           <SectionHeader title="Billing History" />
           <Button className="py-2 px-4 mt-3" variant="primary">
             Download all
           </Button>
         </div>
-        <div className="mb-10 mt-5 md:px-4">
+        <div className="mb-10 mt-5 ">
           <Table />
         </div>
       </div>

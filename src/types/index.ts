@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 
 export interface IData {
   name: string;
@@ -23,4 +23,11 @@ export interface TableBodyProps {
   date: string;
   status: string;
   id: number;
+}
+
+export interface SidebarData {
+  id: number;
+  icon: ReactNode;
+  label: string;
+  count?: number;
 }

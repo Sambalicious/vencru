@@ -6,7 +6,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const isDesktop = useMediaQuery("(min-width:1060px)");
 
   return (
-    <div className="">
+    <div className="flex">
       <Transition
         as={Fragment}
         show={isDesktop}
@@ -20,11 +20,11 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
         <SideBar />
       </Transition>
       <main
-        className={` transition-all duration-[400ms] ${
-          isDesktop ? "pl-56" : ""
+        className={`w-full transition-all duration-[400ms] ${
+          isDesktop ? "" : ""
         }`}
       >
-        <div className="bg-gray-50 md:px-4 py-5">{children}</div>
+        <div className="bg-gray-50 md:px-4 py-5 w-full">{children}</div>
       </main>
     </div>
   );
