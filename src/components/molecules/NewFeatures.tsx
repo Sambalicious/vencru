@@ -6,7 +6,7 @@ export const NewFeatures = () => {
       <h6 className="font-medium text-sm text-gray-900">
         New features available!
       </h6>
-      <p className="text-gray-500 font-normal text-sm py-2">
+      <p className="text-gray-500 font-normal text-xs py-2">
         Check out the new dashboard view. Pages now load faster.{" "}
       </p>
 

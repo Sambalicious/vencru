@@ -1,9 +1,20 @@
 import { forwardRef } from "react";
 
+import { useMediaQuery } from "@/hooks/mediaQuery";
 import { SidebarData } from "@/types/index";
+import { useNavContext } from "contexts/nav";
 import Image from "next/image";
-import { Input } from "../atoms";
-import { Chart, Home, Settings, Support, Users } from "../Icons";
+import { Button, Input } from "../atoms";
+import {
+  Chart,
+  Flag,
+  Home,
+  Layers,
+  Search,
+  Settings,
+  Support,
+  Users,
+} from "../Icons";
 import { Logout, NavItem, NewFeatures } from "../molecules";
 
 interface SidebarProps {
@@ -25,12 +36,12 @@ const sidebarItems: SidebarData[] = [
   {
     id: 3,
     label: "Projects",
-    icon: <Chart fontSize={"20px"} fill="none" stroke="#667085" />,
+    icon: <Layers fontSize={"20px"} fill="none" stroke="#667085" />,
   },
   {
     id: 3,
-    label: "Tasks",
-    icon: <Chart fontSize={"20px"} fill="none" stroke="#667085" />,
+    label: "Reporting",
+    icon: <Flag fontSize={"20px"} fill="none" stroke="#667085" />,
   },
   {
     id: 3,
@@ -50,26 +61,53 @@ const sidebarItems: SidebarData[] = [
 ];
 
 const SideBar = forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
-  return (
-    <aside ref={ref} className="w-[274px] pb-10  bg-white shadow-sm md:px-4 ">
-      <div className="flex  my-4 ">
-        <Image src="/icons/untitled.png" alt="logo" width={143} height={32} />
-      </div>
-      <div>
-        <Input type={"search"} placeholder="Search" />
-      </div>
+  const isDesktop = useMediaQuery("(min-width:1060px)");
+  const { nav, setNav } = useNavContext();
 
-      {sidebarItems?.map(item => (
-        <NavItem
-          key={item.id}
-          label={item.label}
-          icon={item.icon}
-          count={item.count}
-        />
-      ))}
-      <NewFeatures />
-      <Logout />
-    </aside>
+  return (
+    <>
+      <aside
+        ref={ref}
+        className=" md:w-[280px] md:pb-10   bg-white shadow-sm md:px-3 absolute p-4 h-max md:sticky top-0  "
+      >
+        <div className="flex justify-between mb-4 mt-8 ">
+          {isDesktop && (
+            <Image
+              src="/icons/untitled.png"
+              alt="logo"
+              width={143}
+              height={32}
+            />
+          )}
+          {!isDesktop && (
+            <Button
+              onClick={() => setNav(!nav)}
+              className="flex justify-end text-xl  w-full font-bold"
+              variant="ghost"
+            >
+              &times;
+            </Button>
+          )}
+        </div>
+        <div className="relative">
+          <div className="absolute top-5 left-4">
+            <Search fill="none" fontSize={"20px"} stroke="#667085" />
+          </div>
+          <Input type={"search"} placeholder="Search" />
+        </div>
+
+        {sidebarItems?.map(item => (
+          <NavItem
+            key={item.id}
+            label={item.label}
+            icon={item.icon}
+            count={item.count}
+          />
+        ))}
+        <NewFeatures />
+        <Logout />
+      </aside>
+    </>
   );
 });
 

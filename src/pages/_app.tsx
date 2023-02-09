@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
 
+import { NavProvider } from "contexts/nav";
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat";
 import "react-responsive-modal/styles.css";
@@ -50,7 +51,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         }}
       />
 
-      {getLayout(<Component {...pageProps} />)}
+      <NavProvider>{getLayout(<Component {...pageProps} />)}</NavProvider>
     </>
   );
 }

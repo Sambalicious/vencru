@@ -1,4 +1,4 @@
-import { Visa } from "@/components/Icons";
+import { Mastercard, Visa } from "@/components/Icons";
 import {
   IData,
   PaymentCardProps,
@@ -24,7 +24,7 @@ export const paymentCards: PaymentCardProps[] = [
     cardNumber: 1290,
     type: "Master card",
     expiryDate: "02/35",
-    icon: <Visa fontSize={"50px"} fill="none" />,
+    icon: <Mastercard fontSize={"50px"} fill="none" />,
   },
   {
     id: 2,

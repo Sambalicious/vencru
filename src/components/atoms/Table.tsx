@@ -1,6 +1,6 @@
 import { tableBodyData, tableHeadData } from "@/utils/dummy";
 import { formatCurrency } from "@/utils/helpers";
-import { Download } from "../Icons";
+import { ArrowDown, Download } from "../Icons";
 import { Avatar } from "./Avatar";
 import { Badge } from "./Badge";
 import { Button } from "./Button";
@@ -25,7 +25,14 @@ export const Table = () => {
                 }`}
                 key={item.id}
               >
-                {item.name}{" "}
+                {item.name === "Invoice" ? (
+                  <div className="flex items-center gap-2">
+                    {item.name}
+                    <ArrowDown fill="none" stroke="#667085" />
+                  </div>
+                ) : (
+                  item.name
+                )}{" "}
               </th>
             ))}
             <th></th>

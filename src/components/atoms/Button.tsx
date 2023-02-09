@@ -34,22 +34,20 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       return <Link href={href}>{text} </Link>;
     }
     return (
-      <div>
-        <button
-          className={clsx(
-            isGhost && "bg-transparent",
-            isHyperlink && "bg-transparent",
-            isPrimary &&
-              "bg-white rounded-lg border border-solid border-gray-300",
-            "font-medium text-sm",
-            customClassName,
-          )}
-          ref={ref}
-          {...rest}
-        >
-          {text || children}{" "}
-        </button>
-      </div>
+      <button
+        className={clsx(
+          isGhost && "bg-transparent",
+          isHyperlink && "bg-transparent",
+          isPrimary &&
+            "bg-white rounded-lg border border-solid border-gray-300",
+          "font-medium text-sm",
+          customClassName,
+        )}
+        ref={ref}
+        {...rest}
+      >
+        {text || children}{" "}
+      </button>
     );
   },
 );

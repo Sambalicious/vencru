@@ -20,7 +20,7 @@ export const Logout = () => {
         </div>
       </div>
       <Button>
-        <LogoutIcon fontSize="26px" fill="none" stroke="#667085" />
+        <LogoutIcon fontSize="27px" fill="none" stroke="#667085" />
       </Button>
     </div>
   );
