@@ -17,7 +17,7 @@ export const PaymentCard = ({
   icon,
 }: PaymentCardProps) => {
   return (
-    <div className="flex justify-between py-2 px-3 my-3  rounded-lg bg-primary-50 border border-solid border-primary-300">
+    <div className="flex justify-between py-2 px-3 my-3 items-start  rounded-lg bg-primary-50 border border-solid border-primary-300">
       <div className="flex gap-2">
         <div>{icon}</div>
         <div>

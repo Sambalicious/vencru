@@ -1,8 +1,14 @@
 export { default as Svg3Layers } from "./3Layers";
+export { default as Avatar1 } from "./Avatar1";
+export { default as Avatar2 } from "./Avatar2";
+export { default as Avatar } from "./Avatar";
 export { default as Icon } from "./Icon";
 export { default as Chart } from "./Chart";
+export { default as Download } from "./Download";
 export { default as Flag } from "./Flag";
 export { default as Home } from "./Home";
+export { default as Message } from "./Message";
+export { default as NavGirl } from "./NavGirl";
 export { default as Settings } from "./Settings";
 export { default as Support } from "./Support";
 export { default as Users } from "./Users";

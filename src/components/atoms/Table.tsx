@@ -1,6 +1,9 @@
 import { tableBodyData, tableHeadData } from "@/utils/dummy";
 import { formatCurrency } from "@/utils/helpers";
+import { Download } from "../Icons";
+import { Avatar } from "./Avatar";
 import { Badge } from "./Badge";
+import { Button } from "./Button";
 import { CheckBox } from "./Checkbox";
 
 export const Table = () => {
@@ -47,10 +50,12 @@ export const Table = () => {
                 <Badge text={item.status} />{" "}
               </td>
               <td className=" font-medium text-sm text-gray-900 hidden md:table-cell    whitespace-nowrap py-5">
-                {item.status}{" "}
+                <Avatar />
               </td>
               <td className=" font-medium text-sm text-gray-900 hidden md:table-cell   whitespace-nowrap py-5">
-                Download
+                <Button variant="ghost">
+                  <Download fill="none" stroke="#667085" />{" "}
+                </Button>
               </td>
             </tr>
           ))}

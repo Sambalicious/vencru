@@ -1,11 +1,31 @@
-import { ReactNode } from "react";
+import { useMediaQuery } from "@/hooks/mediaQuery";
+import { Transition } from "@headlessui/react";
+import { Fragment, ReactNode } from "react";
+import SideBar from "./Sidebar";
+export const DashboardLayout = ({ children }: { children: ReactNode }) => {
+  const isDesktop = useMediaQuery("(min-width:1060px)");
 
-const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
-      <section> {children}</section>
+    <div className="">
+      <Transition
+        as={Fragment}
+        show={isDesktop}
+        enter="transform transition duration-[400ms]"
+        enterFrom="-translate-x-full"
+        enterTo="translate-x-0"
+        leave="transform duration-[400ms] transition ease-in-out"
+        leaveFrom="translate-x-0"
+        leaveTo="-translate-x-full"
+      >
+        <SideBar />
+      </Transition>
+      <main
+        className={` transition-all duration-[400ms] ${
+          isDesktop ? "pl-56" : ""
+        }`}
+      >
+        <div className="bg-gray-50 md:px-4 py-5">{children}</div>
+      </main>
     </div>
   );
 };
-
-export default DashboardLayout;
