@@ -1,9 +1,10 @@
 import { DashboardLayout } from "@/components/organisms";
 import { SettingsLayout } from "@/components/organisms/SettingsLayout";
+import { NextPageWithLayout } from "@/types/page";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-function Home() {
+const Settings: NextPageWithLayout = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,9 +24,9 @@ function Home() {
       </main>
     </div>
   );
-}
+};
 
-Home.getLayout = (page: any) => {
+Settings.getLayout = page => {
   return <DashboardLayout>{page} </DashboardLayout>;
 };
-export default Home;
+export default Settings;
