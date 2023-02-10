@@ -5,8 +5,18 @@ import Image from "next/image";
 import { Fragment, ReactNode } from "react";
 import { Button } from "../atoms";
 import { Menu } from "../Icons";
+import { PageLayout } from "./PageLayout";
 import SideBar from "./Sidebar";
-export const DashboardLayout = ({ children }: { children: ReactNode }) => {
+
+interface DashboardLayoutProps {
+  pageTitle: string;
+  pageSubTitle: string;
+  children: ReactNode;
+}
+export const DashboardLayout = ({
+  pageTitle,
+  pageSubTitle,
+}: DashboardLayoutProps) => {
   const isDesktop = useMediaQuery("(min-width:1060px)");
   const { nav, setNav } = useNavContext();
   return (
@@ -49,7 +59,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
               nav && !isDesktop ? "hidden" : "block"
             }`}
           >
-            {children}
+            <PageLayout pageTitle={pageTitle} pageSubTitle={pageSubTitle} />
           </div>
         </main>
       </>

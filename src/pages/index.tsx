@@ -23,6 +23,13 @@ function Home() {
 }
 
 Home.getLayout = (page: any) => {
-  return <DashboardLayout>{page} </DashboardLayout>;
+  return (
+    <DashboardLayout
+      pageTitle="Settings"
+      pageSubTitle="Manage your team and preferences here."
+    >
+      {page}{" "}
+    </DashboardLayout>
+  );
 };
 export default Home;
