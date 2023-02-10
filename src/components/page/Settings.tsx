@@ -2,6 +2,7 @@ import { PageHeader, SectionHeader } from "@/components/molecules";
 import { tabList } from "@/utils/dummy";
 import { Tab } from "@headlessui/react";
 import { Button, Table } from "../atoms";
+import { Download } from "../Icons";
 import { CardDetails, Contact } from "../organisms";
 const Settings = () => {
   return (
@@ -50,8 +51,15 @@ const Settings = () => {
 
                 <div className="md:flex justify-between items-center my-3">
                   <SectionHeader title="Billing History" />
-                  <Button className="py-2 px-4 mt-3" variant="primary">
-                    Download all
+                  <Button
+                    className="py-2 px-4 mt-3 flex items-center gap-2"
+                    variant="primary"
+                  >
+                    <Download fontSize={"18px"} fill="none" stroke="#344054" />
+                    <p className="text-gray-700 font-medium text-sm">
+                      {" "}
+                      Download all
+                    </p>
                   </Button>
                 </div>
                 <div className="mb-10 mt-5 ">
