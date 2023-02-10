@@ -1,15 +1,15 @@
 interface RadioProps {
   label?: string;
   checked: boolean;
-  onClick: () => void;
+  onChange: () => void;
 }
 
-export const Radio = ({ label, checked, onClick }: RadioProps) => {
+export const Radio = ({ label, checked, onChange }: RadioProps) => {
   return (
     <div className="flex items-center">
       <input
         checked={checked}
-        onClick={onClick}
+        onChange={onChange}
         className="accent-primary-600"
         type="radio"
       />

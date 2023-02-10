@@ -14,7 +14,7 @@ export const Contact = () => {
 
       <div className="md:w-8/12">
         <ContactRadio
-          onClick={() => setSelectedContact("email")}
+          onChange={() => setSelectedContact("email")}
           checked={selectedContact === "email"}
           label="Send to my account email"
         >
@@ -22,7 +22,7 @@ export const Contact = () => {
         </ContactRadio>
 
         <ContactRadio
-          onClick={() => setSelectedContact("other account")}
+          onChange={() => setSelectedContact("other account")}
           checked={selectedContact === "other account"}
           label="Send to alternative account"
         >

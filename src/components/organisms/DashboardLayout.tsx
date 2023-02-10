@@ -4,13 +4,23 @@ import { useNavContext } from "contexts/nav";
 import Image from "next/image";
 import { Fragment, ReactNode } from "react";
 import { Button } from "../atoms";
-import { Hamburger } from "../Icons";
+import { Menu } from "../Icons";
+import { PageLayout } from "./PageLayout";
 import SideBar from "./Sidebar";
-export const DashboardLayout = ({ children }: { children: ReactNode }) => {
+
+interface DashboardLayoutProps {
+  pageTitle: string;
+  pageSubTitle: string;
+  children: ReactNode;
+}
+export const DashboardLayout = ({
+  pageTitle,
+  pageSubTitle,
+}: DashboardLayoutProps) => {
   const isDesktop = useMediaQuery("(min-width:1060px)");
   const { nav, setNav } = useNavContext();
   return (
-    <div className="flex">
+    <div className="flex bg-gray-50">
       <Transition
         as={Fragment}
         show={nav || isDesktop}
@@ -39,17 +49,17 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
                   height={32}
                 />
                 <Button variant="ghost" onClick={() => setNav(!nav)}>
-                  <Hamburger fill="none" fontSize={"26px"} stroke="#667085" />
+                  <Menu fill="none" fontSize={"26px"} stroke="#667085" />
                 </Button>
               </header>
             </div>
           )}
           <div
-            className={`bg-gray-50 md:px-4 py-5 min-h-full w-full ${
+            className={` md:px-4 py-5 min-h-full w-full ${
               nav && !isDesktop ? "hidden" : "block"
             }`}
           >
-            {children}
+            <PageLayout pageTitle={pageTitle} pageSubTitle={pageSubTitle} />
           </div>
         </main>
       </>

@@ -5,17 +5,17 @@ interface ContactRadioProps {
   children: ReactNode;
   label: string;
   checked: boolean;
-  onClick: () => void;
+  onChange: () => void;
 }
 export const ContactRadio = ({
   children,
   label,
-  onClick,
+  onChange,
   checked,
 }: ContactRadioProps) => {
   return (
     <div className="my-3">
-      <Radio label={label} checked={checked} onClick={onClick} />
+      <Radio label={label} checked={checked} onChange={onChange} />
       <div className="pl-5">{children} </div>
     </div>
   );
