@@ -1,6 +1,6 @@
 import { DashboardLayout } from "@/components/organisms";
+import { SettingsLayout } from "@/components/organisms/SettingsLayout";
 import Head from "next/head";
-import Settings from "../components/page/Settings";
 import styles from "../styles/Home.module.css";
 
 function Home() {
@@ -16,20 +16,16 @@ function Home() {
       </Head>
 
       <main>
-        <Settings />
+        <SettingsLayout
+          pageTitle={"Settings"}
+          pageSubTitle={"Manage your team and preferences here."}
+        />
       </main>
     </div>
   );
 }
 
 Home.getLayout = (page: any) => {
-  return (
-    <DashboardLayout
-      pageTitle="Settings"
-      pageSubTitle="Manage your team and preferences here."
-    >
-      {page}{" "}
-    </DashboardLayout>
-  );
+  return <DashboardLayout>{page} </DashboardLayout>;
 };
 export default Home;
