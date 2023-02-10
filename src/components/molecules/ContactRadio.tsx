@@ -15,7 +15,7 @@ export const ContactRadio = ({
 }: ContactRadioProps) => {
   return (
     <div className="my-3">
-      <Radio label={label} checked={checked} onClick={onClick} />
+      <Radio label={label} checked={checked} onChange={onClick} />
       <div className="pl-5">{children} </div>
     </div>
   );

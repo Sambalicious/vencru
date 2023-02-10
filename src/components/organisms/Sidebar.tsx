@@ -13,6 +13,7 @@ import {
   Search,
   Settings,
   Support,
+  Task,
   Users,
 } from "../Icons";
 import { Logout, NavItem, NewFeatures } from "../molecules";
@@ -35,26 +36,31 @@ const sidebarItems: SidebarData[] = [
   },
   {
     id: 3,
+    label: "Tasks",
+    icon: <Task fontSize={"20px"} fill="none" stroke="#667085" />,
+  },
+  {
+    id: 4,
     label: "Projects",
     icon: <Layers fontSize={"20px"} fill="none" stroke="#667085" />,
   },
   {
-    id: 3,
+    id: 5,
     label: "Reporting",
     icon: <Flag fontSize={"20px"} fill="none" stroke="#667085" />,
   },
   {
-    id: 3,
+    id: 6,
     label: "Settings",
     icon: <Settings fontSize={"20px"} fill="none" stroke="#EAECF0" />,
   },
   {
-    id: 3,
+    id: 7,
     label: "Users",
     icon: <Users fontSize={"20px"} fill="none" stroke="#667085" />,
   },
   {
-    id: 3,
+    id: 8,
     label: "Support",
     icon: <Support fontSize={"20px"} fill="none" stroke="#667085" />,
   },

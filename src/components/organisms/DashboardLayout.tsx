@@ -4,7 +4,7 @@ import { useNavContext } from "contexts/nav";
 import Image from "next/image";
 import { Fragment, ReactNode } from "react";
 import { Button } from "../atoms";
-import { Hamburger } from "../Icons";
+import { Menu } from "../Icons";
 import SideBar from "./Sidebar";
 export const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const isDesktop = useMediaQuery("(min-width:1060px)");
@@ -39,7 +39,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
                   height={32}
                 />
                 <Button variant="ghost" onClick={() => setNav(!nav)}>
-                  <Hamburger fill="none" fontSize={"26px"} stroke="#667085" />
+                  <Menu fill="none" fontSize={"26px"} stroke="#667085" />
                 </Button>
               </header>
             </div>

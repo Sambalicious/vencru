@@ -13,7 +13,7 @@ const Settings = () => {
           subTitle={"Manage your team and preferences here"}
         />
       </div>
-      <div className="rounded-md ">
+      <div>
         <Tab.Group defaultIndex={5}>
           <Tab.List className={"overflow-x-auto flex md:px-4"}>
             {tabList?.map(tab => (

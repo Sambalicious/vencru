@@ -59,7 +59,7 @@ export const PaymentCard = ({
           </div>
         </div>
       </div>
-      <Radio checked={checked} onClick={makeDefault} />
+      <Radio checked={checked} onChange={makeDefault} />
     </div>
   );
 };
