@@ -20,8 +20,10 @@ const Settings = () => {
               <Tab
                 className={({ selected }) =>
                   `${
-                    selected ? "text-gray-800 bg-gray-50 outline-none" : ""
-                  } first:rounded-[8px_0px_0px_8px] last:rounded-[0px_8px_8px_0px] border-[8px_0px_0px_8px] text-gray-700 font-normal text-sm px-6 py-2 whitespace-nowrap border border-solid border-gray-300 bg-red`
+                    selected
+                      ? "text-gray-800 bg-gray-50 outline-none"
+                      : "bg-white"
+                  } first:rounded-[8px_0px_0px_8px] last:rounded-[0px_8px_8px_0px] border-[8px_0px_0px_8px] text-gray-700 font-normal text-sm px-6 py-2 whitespace-nowrap border border-solid border-gray-300`
                 }
                 key={tab.id}
               >
