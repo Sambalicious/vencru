@@ -74,7 +74,7 @@ const SideBar = forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
     <>
       <aside
         ref={ref}
-        className=" lg:w-[280px] md:pb-10   bg-white shadow-sm md:px-3 absolute p-4 h-max md:sticky top-0  "
+        className=" lg:w-[280px] md:pb-10   bg-white shadow-sm md:px-3 absolute p-4 h-max md:sticky top-0 backdrop-blur-xl "
       >
         <div className="flex justify-between mb-4 mt-8 ">
           {isDesktop && (
