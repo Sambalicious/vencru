@@ -3,6 +3,7 @@ export { default as Avatar2 } from "./Avatar2";
 export { default as Avatar } from "./Avatar";
 export { default as ArrowDown } from "./ArrowDown";
 export { default as Chart } from "./Chart";
+export { default as Check } from "./Check";
 export { default as Download } from "./Download";
 export { default as Flag } from "./Flag";
 export { default as Home } from "./Home";
