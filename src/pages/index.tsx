@@ -1,5 +1,5 @@
 import { DashboardLayout } from "@/components/organisms";
-import { SettingsLayout } from "@/components/organisms/SettingsLayout";
+import { SettingsTab } from "@/components/organisms/SettingsTab";
 import { NextPageWithLayout } from "@/types/page";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
@@ -17,7 +17,7 @@ const Settings: NextPageWithLayout = () => {
       </Head>
 
       <main>
-        <SettingsLayout
+        <SettingsTab
           pageTitle={"Settings"}
           pageSubTitle={"Manage your team and preferences here."}
         />

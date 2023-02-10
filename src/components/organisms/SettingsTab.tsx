@@ -8,7 +8,7 @@ interface SettingsLayoutProps {
   pageSubTitle: string;
 }
 
-export const SettingsLayout = ({
+export const SettingsTab = ({
   pageTitle,
   pageSubTitle,
 }: SettingsLayoutProps) => {

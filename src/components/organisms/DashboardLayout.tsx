@@ -18,7 +18,7 @@ export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       <Transition
         as={Fragment}
         show={nav || isDesktop}
-        enter="transform transition duration-[400ms]"
+        enter="transform transition duration-[200ms]"
         enterFrom="-translate-x-full"
         enterTo="translate-x-0"
         leave="transform duration-[400ms] transition ease-in-out"
@@ -28,11 +28,7 @@ export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
         <SideBar />
       </Transition>
       <>
-        <main
-          className={`w-full transition-all duration-[400ms] ${
-            isDesktop ? "" : ""
-          }`}
-        >
+        <main className={`w-full transition-all duration-[200ms]`}>
           {!isDesktop && (
             <div className="px-6 py-4 items-center sticky top-0 bg-white">
               <header className="flex justify-between">
