@@ -68,7 +68,7 @@ const SideBar = forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
     <>
       <aside
         ref={ref}
-        className=" md:w-[280px] md:pb-10   bg-white shadow-sm md:px-3 absolute p-4 h-max md:sticky top-0  "
+        className=" lg:w-[280px] md:pb-10   bg-white shadow-sm md:px-3 absolute p-4 h-max md:sticky top-0  "
       >
         <div className="flex justify-between mb-4 mt-8 ">
           {isDesktop && (
@@ -82,7 +82,7 @@ const SideBar = forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
           {!isDesktop && (
             <Button
               onClick={() => setNav(!nav)}
-              className="flex justify-end text-xl  w-full font-bold"
+              className="flex justify-end text-xl text-gray-500  w-full font-bold"
               variant="ghost"
             >
               &times;

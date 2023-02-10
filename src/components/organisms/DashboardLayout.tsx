@@ -10,7 +10,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const isDesktop = useMediaQuery("(min-width:1060px)");
   const { nav, setNav } = useNavContext();
   return (
-    <div className="flex">
+    <div className="flex bg-gray-50">
       <Transition
         as={Fragment}
         show={nav || isDesktop}
@@ -45,7 +45,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
             </div>
           )}
           <div
-            className={`bg-gray-50 md:px-4 py-5 min-h-full w-full ${
+            className={` md:px-4 py-5 min-h-full w-full ${
               nav && !isDesktop ? "hidden" : "block"
             }`}
           >
