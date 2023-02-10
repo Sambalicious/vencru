@@ -3,12 +3,15 @@ import { tabList } from "@/utils/dummy";
 import { Tab } from "@headlessui/react";
 import Settings from "../page/Settings";
 
-interface PageLayoutProps {
+interface SettingsLayoutProps {
   pageTitle: string;
   pageSubTitle: string;
 }
 
-export const PageLayout = ({ pageTitle, pageSubTitle }: PageLayoutProps) => {
+export const SettingsLayout = ({
+  pageTitle,
+  pageSubTitle,
+}: SettingsLayoutProps) => {
   return (
     <div>
       <div className="my-3 px-4">
@@ -38,10 +41,8 @@ export const PageLayout = ({ pageTitle, pageSubTitle }: PageLayoutProps) => {
             <Tab.Panel className="px-4">Password</Tab.Panel>
             <Tab.Panel className="px-4">Teams</Tab.Panel>
             <Tab.Panel className="px-4">Plan</Tab.Panel>
-            <Tab.Panel>
-              <div className="px-4">
-                <Settings />
-              </div>
+            <Tab.Panel className={"px-4"}>
+              <Settings />
             </Tab.Panel>
             <Tab.Panel className="px-4">Notification</Tab.Panel>
             <Tab.Panel className="px-4">Integration</Tab.Panel>
