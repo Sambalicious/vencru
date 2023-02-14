@@ -3,6 +3,7 @@ import { useNavContext } from "contexts/nav";
 import { Button } from "../atoms";
 
 export const NavItem = ({ label, icon, count }: Omit<SidebarData, "id">) => {
+  const Icon = icon;
   const isPath = label?.toLowerCase() === "settings";
   const { nav, setNav } = useNavContext();
   return (
@@ -16,7 +17,9 @@ export const NavItem = ({ label, icon, count }: Omit<SidebarData, "id">) => {
         className="flex w-full gap-4 items-center"
         variant="ghost"
       >
-        <div>{icon}</div>
+        <div>
+          <Icon fontSize={"20px"} fill="none" stroke="#667085" />{" "}
+        </div>
         <p className="flex gap-3 text-gray-700 font-normal text-base">
           {label}
         </p>
