@@ -26,43 +26,43 @@ const sidebarItems: SidebarData[] = [
   {
     id: 1,
     label: "Home",
-    icon: <Home fontSize={"20px"} fill="none" stroke="#667085" />,
+    icon: Home,
   },
   {
     id: 2,
     label: "Dashboard",
-    icon: <Chart fontSize={"20px"} fill="none" stroke="#667085" />,
+    icon: Chart,
     count: 10,
   },
   {
     id: 3,
     label: "Tasks",
-    icon: <Task fontSize={"20px"} fill="none" stroke="#667085" />,
+    icon: Task,
   },
   {
     id: 4,
     label: "Projects",
-    icon: <Layers fontSize={"20px"} fill="none" stroke="#667085" />,
+    icon: Layers,
   },
   {
     id: 5,
     label: "Reporting",
-    icon: <Flag fontSize={"20px"} fill="none" stroke="#667085" />,
+    icon: Flag,
   },
   {
     id: 6,
     label: "Settings",
-    icon: <Settings fontSize={"20px"} fill="none" stroke="#EAECF0" />,
+    icon: Settings,
   },
   {
     id: 7,
     label: "Users",
-    icon: <Users fontSize={"20px"} fill="none" stroke="#667085" />,
+    icon: Users,
   },
   {
     id: 8,
     label: "Support",
-    icon: <Support fontSize={"20px"} fill="none" stroke="#667085" />,
+    icon: Support,
   },
 ];
 

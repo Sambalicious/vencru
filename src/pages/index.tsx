@@ -1,5 +1,4 @@
-import { DashboardLayout } from "@/components/organisms";
-import { SettingsTab } from "@/components/organisms/SettingsTab";
+import { DashboardLayout, SettingsTab } from "@/components/organisms";
 import { NextPageWithLayout } from "@/types/page";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";

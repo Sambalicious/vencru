@@ -1,4 +1,5 @@
-import { ReactElement, ReactNode } from "react";
+import { BadgeStatus } from "@/components/atoms";
+import { FC, ReactElement, SVGProps } from "react";
 
 export interface IData {
   name: string;
@@ -21,13 +22,13 @@ export interface TableBodyProps {
   invoice: string;
   amount: number;
   date: string;
-  status: string;
+  status: BadgeStatus;
   id: number;
 }
 
 export interface SidebarData {
   id: number;
-  icon: ReactNode;
+  icon: FC<SVGProps<SVGSVGElement>>;
   label: string;
   count?: number;
 }

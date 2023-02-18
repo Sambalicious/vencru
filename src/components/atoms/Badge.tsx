@@ -1,14 +1,24 @@
+import { FC, SVGProps } from "react";
 import { Check } from "../Icons";
 
 interface BadgeProps {
-  text: string;
+  text: BadgeStatus;
 }
 
+export type BadgeStatus = "Paid" | "Cancelled";
+
 export const Badge = ({ text }: BadgeProps) => {
+  const badgeIcon: Record<BadgeStatus, FC<SVGProps<SVGSVGElement>>> = {
+    Paid: Check,
+    Cancelled: Check,
+  };
+  const Icon = badgeIcon[text];
   return (
-    <div className="bg-green-100 px-4 py-1 w-max flex items-center gap-1  rounded-2xl  ">
-      <Check fontSize={"12px "} fill="none" stroke="#027A48" />
-      <p className="text-success-700 font-normal text-xs">{text}</p>{" "}
+    <div className="flex items-center gap-1 px-4 py-1 bg-green-100 w-max rounded-2xl ">
+      <div>
+        <Icon fontSize={"12px "} fill="none" stroke="#027A48" />{" "}
+      </div>
+      <p className="text-xs font-normal text-success-700">{text}</p>{" "}
     </div>
   );
 };
