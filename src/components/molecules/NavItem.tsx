@@ -4,8 +4,17 @@ import { Button } from "../atoms";
 
 export const NavItem = ({ label, icon, count }: Omit<SidebarData, "id">) => {
   const Icon = icon;
-  const isPath = label?.toLowerCase() === "settings";
+  // const [activeRoute, setActiveRouter] = useState("");
+  const isPath =
+    // activeRoute?.toLowerCase() ===
+    label?.toLowerCase() === "settings";
+  // console.log({ isPath });
   const { nav, setNav } = useNavContext();
+
+  const handleClick = () => {
+    //  setActiveRouter(route);
+    setNav(!nav);
+  };
   return (
     <div
       className={`flex justify-between items-center w-full my-5 ${
@@ -13,7 +22,7 @@ export const NavItem = ({ label, icon, count }: Omit<SidebarData, "id">) => {
       }`}
     >
       <Button
-        onClick={() => setNav(!nav)}
+        onClick={handleClick}
         className="flex w-full gap-4 items-center"
         variant="ghost"
       >
